@@ -12,7 +12,7 @@ In order to use Cake.DotNetVersionDetector, you will need to add the following t
 
 **NOTE:** Depending on the currently released version, you might want to change the above to reflect the current version number.  The above is shown to ensure that the best practice of pinning your Cake Addin version numbers is adhered to.
 
-And then you execute DotNetVersionDectector, you can use:
+Then you execute DotNetVersionDetector using:
 
 ```csharp
 DotNetVersionDetector("c:/temp/output.txt");;
