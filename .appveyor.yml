@@ -25,7 +25,7 @@ branches:
 #  Build Cache                    #
 #---------------------------------#
 cache:
-- tools -> recipe.cake
+- tools -> recipe.cake, tools/packages.config
 
 #---------------------------------#
 #  Skip builds for doc changes    #
