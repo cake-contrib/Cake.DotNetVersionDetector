@@ -72,8 +72,10 @@ namespace Cake.DotNetVersionDetector.Tests
             public void Should_Throw_If_Output_File_Is_Null()
             {
                 // Given
-                var fixture = new DotNetVersionDetectorRunnerFixture();
-                fixture.OutputFilePath = null;
+                var fixture = new DotNetVersionDetectorRunnerFixture
+                {
+                    OutputFilePath = null
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());

@@ -1,4 +1,4 @@
-#load nuget:?package=Cake.Recipe&version=1.0.0
+#load nuget:https://pkgs.dev.azure.com/cake-contrib/Home/_packaging/addins/nuget/v3/index.json?package=Cake.Recipe&prerelease
 
 Environment.SetVariableNames();
 
@@ -9,7 +9,8 @@ BuildParameters.SetParameters(context: Context,
                             repositoryOwner: "cake-contrib",
                             repositoryName: "Cake.DotNetVersionDetector",
                             appVeyorAccountName: "cakecontrib",
-                            shouldRunGitVersion: true);
+                            shouldRunDotNetCorePack: true,
+                            shouldUseDeterministicBuilds: true);
 
 BuildParameters.PrintParameters(Context);
 
@@ -17,7 +18,7 @@ ToolSettings.SetToolSettings(context: Context,
                             dupFinderExcludePattern: new string[] {
                             BuildParameters.RootDirectoryPath + "/Source/Cake.DotNetVersionDetector.Tests/*.cs",
                             BuildParameters.RootDirectoryPath + "/Source/Cake.DotNetVersionDetector/**/*.AssemblyInfo.cs" },
-                            testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ",
+                            testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]*",
                             testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
                             testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
 

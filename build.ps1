@@ -250,7 +250,13 @@ if ($ShowDescription) { $cakeArguments += "-showdescription" }
 if ($DryRun) { $cakeArguments += "-dryrun" }
 $cakeArguments += $ScriptArgs
 
-# Start Cake
-Write-Host "Running build script..."
-Invoke-Expression "& $CAKE_EXE_INVOCATION $($cakeArguments -join " ")"
+# Bootstrap & start Cake
+Write-Host "Bootstrapping Cake..."
+Invoke-Expression "& $CAKE_EXE_INVOCATION $Script --bootstrap"
+if ($LASTEXITCODE -eq 0)
+{
+    Write-Host "Running build script..."
+    Invoke-Expression "& $CAKE_EXE_INVOCATION $($cakeArguments -join " ")"
+}
+
 exit $LASTEXITCODE
