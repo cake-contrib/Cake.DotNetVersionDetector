@@ -1,13 +1,16 @@
 $ErrorActionPreference = 'Stop'
 
 function Run([string[]]$arguments) {
-    $proc = Start-Process "dotnet" $arguments -PassThru
-    Wait-Process -InputObject $proc
+    $cmd = @("& dotnet")
+    $cmd += $arguments
+    $cmdLine = $cmd -join " "
+    Write-Verbose "> $cmdLine"
+    Invoke-Expression $cmdLine
 
-    if ($proc.ExitCode -ne 0) {
-        "Non-Zero exit code ($($proc.ExitCode)), exiting..."
-        exit $proc.ExitCode
-    }
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Non-Zero exit code ($($LASTEXITCODE)), exiting..."
+        exit $LASTEXITCODE
+	}
 }
 
 Run tool, restore
