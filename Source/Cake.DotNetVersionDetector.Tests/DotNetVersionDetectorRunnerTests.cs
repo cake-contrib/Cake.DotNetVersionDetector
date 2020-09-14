@@ -1,7 +1,7 @@
 using System;
 using Cake.Core;
-using Cake.DotNetVersionDetector.Tests.Attributes;
 using Cake.Testing;
+using Cake.Testing.Xunit;
 using Xunit;
 
 namespace Cake.DotNetVersionDetector.Tests
