@@ -1,5 +1,6 @@
 using System;
 using Cake.Core;
+using Cake.DotNetVersionDetector.Tests.Attributes;
 using Cake.Testing;
 using Xunit;
 
@@ -40,7 +41,7 @@ namespace Cake.DotNetVersionDetector.Tests
                 Assert.Equal(expected, result.Path.FullPath);
             }
 
-            [Theory]
+            [WindowsTheory]
             [InlineData("C:/DotNetVersionDetector/dotnetversions.exe", "C:/DotNetVersionDetector/dotnetversions.exe")]
             public void Should_Use_DotNetVersionDetector_Runner_From_Tool_Path_If_Provided_On_Windows(string toolPath, string expected)
             {
@@ -128,8 +129,9 @@ namespace Cake.DotNetVersionDetector.Tests
                 Assert.Equal("DotNetVersionDetector: Process returned an error (exit code 1).", result.Message);
             }
 
-            [Fact]
-            public void Should_Set_Extended()
+            [WindowsTheory]
+            [InlineData("\"c:/temp/output.txt\" /extended")]
+            public void Should_Set_Extended_On_Windows(string expected)
             {
                 // Given
                 var fixture = new DotNetVersionDetectorRunnerFixture { Settings = { Extended = true } };
@@ -138,7 +140,7 @@ namespace Cake.DotNetVersionDetector.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("\"c:/temp/output.txt\" /extended", result.Args);
+                Assert.Equal(expected, result.Args);
             }
         }
     }
