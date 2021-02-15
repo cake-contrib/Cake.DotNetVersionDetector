@@ -1,23 +1,15 @@
 $ErrorActionPreference = 'Stop'
 
-function Run([string[]]$arguments) {
-    $cmd = @("& dotnet")
-    $cmd += $arguments
-    $cmdLine = $cmd -join " "
-    Write-Verbose "> $cmdLine"
-    Invoke-Expression $cmdLine
+$SCRIPT_NAME = "recipe.cake"
 
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "Non-Zero exit code ($($LASTEXITCODE)), exiting..."
-        exit $LASTEXITCODE
-	}
-}
+Write-Host "Restoring .NET Core tools"
+dotnet tool restore
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-Run tool, restore
+Write-Host "Bootstrapping Cake"
+dotnet cake $SCRIPT_NAME --bootstrap
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-Run cake, recipe.cake, --bootstrap
-
-$arguments = @("cake"; "recipe.cake")
-$arguments += @($args)
-
-Run $arguments
+Write-Host "Running Build"
+dotnet cake $SCRIPT_NAME @args
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

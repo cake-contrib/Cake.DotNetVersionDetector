@@ -1,6 +1,11 @@
 #!/bin/bash
+SCRIPT_NAME="recipe.cake"
+
+echo "Restoring .NET Core tools"
 dotnet tool restore
 
-dotnet cake recipe.cake --bootstrap
+echo "Bootstrapping Cake"
+dotnet cake $SCRIPT_NAME --bootstrap
 
-dotnet cake recipe.cake "$@"
+echo "Running Build"
+dotnet cake $SCRIPT_NAME "$@"
