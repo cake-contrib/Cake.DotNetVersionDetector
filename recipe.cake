@@ -9,7 +9,8 @@ BuildParameters.SetParameters(context: Context,
                             repositoryOwner: "cake-contrib",
                             repositoryName: "Cake.DotNetVersionDetector",
                             appVeyorAccountName: "cakecontrib",
-                            shouldRunDotNetCorePack: true);
+                            shouldRunDotNetCorePack: true,
+                            preferredBuildProviderType: BuildProviderType.AzurePipelines);
 
 BuildParameters.PrintParameters(Context);
 
