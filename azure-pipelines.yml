@@ -1,11 +1,13 @@
 trigger:
   branches:
-  - develop
-  - master
-  - release/*
-  - hotfix/*
+    include:
+    - develop
+    - master
+    - release/*
+    - hotfix/*
   tags:
-  - '*'
+    include:
+    - '*'
 
 pr:
 - develop
