@@ -1,8 +1,11 @@
 trigger:
-- develop
-- master
-- release/*
-- hotfix/*
+  branches:
+    - develop
+    - master
+    - release/*
+    - hotfix/*
+  tags:
+    - *
 
 pr:
 - develop
