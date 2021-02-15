@@ -1,3 +1,14 @@
+trigger:
+- develop
+- master
+- release/*
+- hotfix/*
+
+pr:
+- develop
+- release/*
+- hotfix/*
+
 pool:
   vmImage: 'windows-latest'
 
