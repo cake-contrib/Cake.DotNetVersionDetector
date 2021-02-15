@@ -9,8 +9,7 @@ BuildParameters.SetParameters(context: Context,
                             repositoryOwner: "cake-contrib",
                             repositoryName: "Cake.DotNetVersionDetector",
                             appVeyorAccountName: "cakecontrib",
-                            shouldRunDotNetCorePack: true,
-                            shouldUseDeterministicBuilds: true);
+                            shouldRunDotNetCorePack: true);
 
 BuildParameters.PrintParameters(Context);
 
