@@ -10,10 +10,13 @@ BuildParameters.SetParameters(context: Context,
                             repositoryName: "Cake.DotNetVersionDetector",
                             appVeyorAccountName: "cakecontrib",
                             shouldRunDotNetCorePack: true,
-                            preferredBuildProviderType: BuildProviderType.AzurePipelines,
+                            preferredBuildProviderType: BuildProviderType.GitHubActions,
                             shouldRunCodecov: false);
 
 BuildParameters.PrintParameters(Context);
+
+ToolSettings.SetToolPreprocessorDirectives(
+  gitReleaseManagerGlobalTool: "#tool dotnet:?package=GitReleaseManager.Tool&version=0.18.0");
 
 ToolSettings.SetToolSettings(context: Context,
                             testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]*",
