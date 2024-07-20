@@ -28,7 +28,7 @@
     <Description>Cake addin for executing DotNetVersionDetector (http://www.asoft.be/prod_netver.html)</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://cake-contrib.github.io/Cake.DotNetVersionDetector/</PackageProjectUrl>
-    <PackageTags>Cake;Cake Script;Build;DotNetVersionDetector;</PackageTags>
+    <PackageTags>Cake;Cake Script;Build;DotNetVersionDetector;cake-build;addin;cake-addin</PackageTags>
     <RepositoryType>git</RepositoryType>
     <PackageSourceProjectUrl>https://github.com/cake-contrib/Cake.DotNetVersionDetector</PackageSourceProjectUrl>
     <RepositoryUrl>$(PackageSourceProjectUrl).git</RepositoryUrl>
