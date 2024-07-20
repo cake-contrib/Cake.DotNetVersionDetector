@@ -161,7 +161,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    <p>Contains functionality related to the <a href="http://www.asoft.be/prod_netver.html">.Net Version Detector</a> tool.</p>
+    <p>Contains functionality related to the <a href="https://www.asoft.be/prod_netver.html">.Net Version Detector</a> tool.</p>
     <p>
     In order to use the commands for this addin, you will need to have the .Net Version Detector tool available.  This can be installed via Chocolatey.
     In addition, you will need to include the following:
@@ -204,6 +204,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakeAliasCategory("DotNetVersionDetector")]
+[PublicAPI]
 public static class DotNetVersionDetectorAliases</code></pre>
 
 
@@ -220,6 +221,10 @@ public static class DotNetVersionDetectorAliases</code></pre>
 				</thead>
 					<tbody><tr>
 						<td>CakeAliasCategory</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>PublicAPI</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -249,7 +254,7 @@ public static class DotNetVersionDetectorAliases</code></pre>
 								<td>void</td>
 								<td>
 									<div>
-    Runs .Net Version Detector, and outputs to specified output FilePath
+    Runs .Net Version Detector, and outputs to specified output FilePath.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -259,7 +264,7 @@ public static class DotNetVersionDetectorAliases</code></pre>
 								<td>void</td>
 								<td>
 									<div>
-    Runs .Net Version Detector, and outputs to specified output FilePath with the specified DotNetVersionDetectorSettings
+    Runs .Net Version Detector, and outputs to specified output FilePath with the specified DotNetVersionDetectorSettings.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
