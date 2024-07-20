@@ -25,7 +25,7 @@
     <Title>$(AssemblyTitle)</Title>
     <Authors>gep13;$(Company)</Authors>
     <Copyright>Copyright © $(FullYear) — $(Authors.Replace(';',','))</Copyright>
-    <Description>Cake addin for executing DotNetVersionDetector (http://www.asoft.be/prod_netver.html)</Description>
+    <Description>Cake addin for executing DotNetVersionDetector (https://www.asoft.be/prod_netver.html)</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://cake-contrib.github.io/Cake.DotNetVersionDetector/</PackageProjectUrl>
     <PackageTags>Cake;Cake Script;Build;DotNetVersionDetector;cake-build;addin;cake-addin</PackageTags>
