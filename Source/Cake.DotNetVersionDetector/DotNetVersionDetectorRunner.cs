@@ -11,7 +11,7 @@ namespace Cake.DotNetVersionDetector
     /// </summary>
     public class DotNetVersionDetectorRunner : Tool<DotNetVersionDetectorSettings>
     {
-        private readonly ICakeEnvironment _environment;
+        private readonly ICakeEnvironment environment;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DotNetVersionDetectorRunner" /> class.
@@ -23,7 +23,7 @@ namespace Cake.DotNetVersionDetector
         public DotNetVersionDetectorRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator toolLocator)
             : base(fileSystem, environment, processRunner, toolLocator)
         {
-            _environment = environment;
+            this.environment = environment;
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Cake.DotNetVersionDetector
         {
             var builder = new ProcessArgumentBuilder();
 
-            builder.AppendQuoted(outputFilePath.MakeAbsolute(_environment).FullPath);
+            builder.AppendQuoted(outputFilePath.MakeAbsolute(environment).FullPath);
 
             if (settings.Extended)
             {
