@@ -1,4 +1,3 @@
-using Cake.Core.IO;
 using Cake.Core.Tooling;
 
 namespace Cake.DotNetVersionDetector

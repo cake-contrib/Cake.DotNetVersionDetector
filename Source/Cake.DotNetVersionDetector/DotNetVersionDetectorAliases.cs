@@ -3,10 +3,12 @@ using Cake.Core;
 using Cake.Core.Annotations;
 using Cake.Core.IO;
 
+using JetBrains.Annotations;
+
 namespace Cake.DotNetVersionDetector
 {
     /// <summary>
-    /// <para>Contains functionality related to the <see href="http://www.asoft.be/prod_netver.html">.Net Version Detector</see> tool.</para>
+    /// <para>Contains functionality related to the <see href="https://www.asoft.be/prod_netver.html">.Net Version Detector</see> tool.</para>
     /// <para>
     /// In order to use the commands for this addin, you will need to have the .Net Version Detector tool available.  This can be installed via Chocolatey.
     /// In addition, you will need to include the following:
@@ -16,6 +18,7 @@ namespace Cake.DotNetVersionDetector
     /// </para>
     /// </summary>
     [CakeAliasCategory("DotNetVersionDetector")]
+    [PublicAPI]
     public static class DotNetVersionDetectorAliases
     {
         /// <summary>
@@ -34,7 +37,7 @@ namespace Cake.DotNetVersionDetector
             DotNetVersionDetector(context, outputFilePath, new DotNetVersionDetectorSettings());
         }
 
-/// <summary>
+        /// <summary>
         /// Runs .Net Version Detector, and outputs to specified output FilePath with the specified DotNetVersionDetectorSettings.
         /// </summary>
         /// <param name="context">The context.</param>
@@ -53,12 +56,12 @@ namespace Cake.DotNetVersionDetector
         {
             if (context == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
             }
 
             if (outputFilePath == null)
             {
-                throw new ArgumentNullException("outputFilePath");
+                throw new ArgumentNullException(nameof(outputFilePath));
             }
 
             var runner = new DotNetVersionDetectorRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
