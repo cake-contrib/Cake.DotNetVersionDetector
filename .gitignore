@@ -346,3 +346,4 @@ BuildArtifacts/*
 
 # Wyam
 docs/input/tasks
+/config.wyam.*

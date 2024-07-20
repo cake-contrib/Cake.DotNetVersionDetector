@@ -9,6 +9,10 @@
     <Company>Cake Contributors</Company>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="$(ProjectDir)../../README.md" Link="README.md" PackagePath="" Pack="true" />
+  </ItemGroup>
+
   <PropertyGroup>
     <!-- I am lazy, so I don't want to update the year every time a new year
           comes around -->
@@ -32,6 +36,7 @@
     <RepositoryUrl>$(PackageSourceProjectUrl).git</RepositoryUrl>
     <PackageReleaseNotes Condition=" '$(Version)' == '$(FileVersion)'">All release notes for $(AssemblyName) can be found on our GitHub release page - $(PackageSourceProjectUrl)/releases/tag/$(Version)</PackageReleaseNotes>
     <PackageReleaseNotes Condition=" '$(Version)' != '$(FileVersion)'">Development releases do not contain release notes, please see the closed issues in these cases - $(PackageSourceProjectUrl)/issues?q=milestone:$(FileVersion)+is:closed</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
