@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<link rel="self" href="http://cake-contrib.github.io/Cake.DotNetVersionDetector" />
 	<id>http://cake-contrib.github.io/Cake.DotNetVersionDetector</id>
 	<title>Cake.DotNetVersionDetector</title>
-	<rights>2019</rights>
-	<updated>2019-01-07T22:17:39Z</updated>
+	<link rel="self" href="http://cake-contrib.github.io/Cake.DotNetVersionDetector" />
+	<rights>2024</rights>
+	<updated>2024-07-20T20:26:40Z</updated>
 </feed>
