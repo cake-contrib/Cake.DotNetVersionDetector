@@ -26,8 +26,6 @@
     <Authors>gep13;$(Company)</Authors>
     <Copyright>Copyright © $(FullYear) — $(Authors.Replace(';',','))</Copyright>
     <Description>Cake addin for executing DotNetVersionDetector (http://www.asoft.be/prod_netver.html)</Description>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://cake-contrib.github.io/Cake.DotNetVersionDetector/</PackageProjectUrl>
     <PackageTags>Cake;Cake Script;Build;DotNetVersionDetector;</PackageTags>
@@ -40,7 +38,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CakeContrib.Guidelines" Version="0.5.0">
+    <PackageReference Include="CakeContrib.Guidelines" Version="1.5.1">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Cake.Addin.Analyzer" Version="0.1.1">
