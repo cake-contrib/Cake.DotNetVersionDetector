@@ -19,7 +19,7 @@ namespace Cake.DotNetVersionDetector
     public static class DotNetVersionDetectorAliases
     {
         /// <summary>
-        /// Runs .Net Version Detector, and outputs to specified output FilePath
+        /// Runs .Net Version Detector, and outputs to specified output FilePath.
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="outputFilePath">The output file path.</param>
@@ -35,7 +35,7 @@ namespace Cake.DotNetVersionDetector
         }
 
 /// <summary>
-        /// Runs .Net Version Detector, and outputs to specified output FilePath with the specified DotNetVersionDetectorSettings
+        /// Runs .Net Version Detector, and outputs to specified output FilePath with the specified DotNetVersionDetectorSettings.
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="outputFilePath">The output file path.</param>

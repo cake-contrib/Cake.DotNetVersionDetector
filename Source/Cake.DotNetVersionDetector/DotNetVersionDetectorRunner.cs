@@ -7,7 +7,7 @@ using Cake.Core.Tooling;
 namespace Cake.DotNetVersionDetector
 {
     /// <summary>
-    /// The .Net Version Detector Runner
+    /// The .Net Version Detector Runner.
     /// </summary>
     public class DotNetVersionDetectorRunner : Tool<DotNetVersionDetectorSettings>
     {
@@ -19,7 +19,7 @@ namespace Cake.DotNetVersionDetector
         /// <param name="fileSystem">The file system.</param>
         /// <param name="environment">The environment.</param>
         /// <param name="processRunner">The process runner.</param>
-        /// <param name="toolLocator">The tool locator</param>
+        /// <param name="toolLocator">The tool locator.</param>
         public DotNetVersionDetectorRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator toolLocator)
             : base(fileSystem, environment, processRunner, toolLocator)
         {
