@@ -1,6 +1,17 @@
 ---
 Title: Examples
 ---
+# Install the DotNetVersionDetector
+
+The DotNetVersionDetector (`dotnetversion.exe`) needs to be installed on your system before
+Cake.DotNetVersionDetector can make use of it.
+
+You can download and install it manually from the [ASoft website](https://www.asoft.be/prod_netver.html).
+Alternatively, you can install it by utilizing [Chocolatey](https://chocolatey.org):
+
+```pwsh
+choco install dotnetversiondetector
+```
 
 # Basic Usage
 

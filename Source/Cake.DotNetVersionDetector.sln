@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.DotNetVersionDetector"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.DotNetVersionDetector.Tests", "Cake.DotNetVersionDetector.Tests\Cake.DotNetVersionDetector.Tests.csproj", "{78EB146D-2178-47FE-B999-1FECF1F3407B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{3D89E7D0-898E-4F5D-8CB7-E572FC56E317}"
+	ProjectSection(SolutionItems) = preProject
+		Cake.DotNetVersionDetector.ruleset = Cake.DotNetVersionDetector.ruleset
+		Directory.Build.targets = Directory.Build.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
