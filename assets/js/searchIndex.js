@@ -53,20 +53,6 @@ var searchModule = function() {
     a(
         {
             id:1,
-            title:"DotNetVersionDetectorSettings",
-            content:"DotNetVersionDetectorSettings",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DotNetVersionDetector/api/Cake.DotNetVersionDetector/DotNetVersionDetectorSettings',
-            title:"DotNetVersionDetectorSettings",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
             title:"DotNetVersionDetectorRunner",
             content:"DotNetVersionDetectorRunner",
             description:'',
@@ -75,6 +61,20 @@ var searchModule = function() {
         {
             url:'/Cake.DotNetVersionDetector/api/Cake.DotNetVersionDetector/DotNetVersionDetectorRunner',
             title:"DotNetVersionDetectorRunner",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
+            title:"DotNetVersionDetectorSettings",
+            content:"DotNetVersionDetectorSettings",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DotNetVersionDetector/api/Cake.DotNetVersionDetector/DotNetVersionDetectorSettings',
+            title:"DotNetVersionDetectorSettings",
             description:""
         }
     );
