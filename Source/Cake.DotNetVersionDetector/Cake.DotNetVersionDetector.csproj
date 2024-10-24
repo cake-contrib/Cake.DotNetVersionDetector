@@ -51,7 +51,7 @@ This version was build for Cake v$(CakeVersion)</Description>
     </PackageReference>
     <PackageReference Include="Cake.Common" Version="$(CakeVersion)" PrivateAssets="All" />
     <PackageReference Include="Cake.Core" Version="$(CakeVersion)" PrivateAssets="All" />
-    <PackageReference Include="JetBrains.Annotations" Version="2024.2.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
